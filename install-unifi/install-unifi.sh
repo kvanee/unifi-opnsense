@@ -140,8 +140,8 @@ AddPkg mkfontscale
 AddPkg dejavu
 AddPkg giflib
 AddPkg xorgproto
-#AddPkg libXdmcp
-AddPkg libpthread-stubs
+AddPkg libXdmcp
+#AddPkg libpthread-stubs
 AddPkg libXau
 AddPkg libxcb
 AddPkg libICE
