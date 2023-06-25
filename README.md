@@ -1,13 +1,13 @@
-unifi-pfsense
+unifi-opnsense
 =============
 
-A script that installs the UniFi Controller software on pfSense and other FreeBSD systems
+A script that installs the UniFi Controller software on OPNSense and other FreeBSD systems
 
 
 Purpose
 -------
 
-The objective of this project is to develop and maintain a script that installs [Ubiquiti's](http://www.ubnt.com/) UniFi Controller software on FreeBSD-based systems, particularly the [pfSense](http://www.pfsense.org/) firewall.
+The objective of this project is to develop and maintain a script that installs [Ubiquiti's](http://www.ubnt.com/) UniFi Controller software on FreeBSD-based systems, particularly the [OPNSense](https://opnsense.org/) firewall.
 
 
 Status
@@ -15,7 +15,7 @@ Status
 
 The project provides an rc script to start and stop the UniFi controller, and an installation script to automatically download and install everything, including the rc script.
 
-This project uses the latest branch from Ubiquiti rather than the LTS branch. From December 2020, this means the 6.x branch.
+This project uses the latest branch from Ubiquiti rather than the LTS branch. 
 
 
 Compatibility
@@ -44,14 +44,14 @@ Be sure to track [Ubiquiti's release notes](https://community.ui.com/releases) f
 You should know that upgrading from earlier versions may be no small task. Ubiquiti sometimes makes substantial changes, especially between major versions. Carefully consult [Ubiquiti's release notes](https://community.ui.com/releases) for upgrading considerations. Proceed with caution.
 
 
-Upgrading pfSense
+Upgrading OPNSense
 -----------------
 
-The pfSense updater will remove everything you install that didn't come through pfSense, including the packages installed by this script.
+The OPNSense updater will remove everything you install that didn't come through OPNSense, including the packages installed by this script.
 
-Before updating pfSense, save a backup of your UniFi controller configuration to another system.
+Before updating OPNSense, save a backup of your UniFi controller configuration to another system.
 
-After updating pfSense, you will need to run this script again to restore the dependencies and the software.
+After updating OPNSense, you will need to run this script again to restore the dependencies and the software.
 
 
 Usage
@@ -59,16 +59,16 @@ Usage
 
 To install the controller software and the rc script:
 
-1. Log in to the pfSense command line shell as root.
+1. Log in to the OPNSense command line shell as root.
 2. Run this one-line command, which downloads the install script from Github and executes it with sh:
 
   ```
-    fetch -o - https://git.io/j7Jy | sh -s
+    fetch -o - https://bit.ly/43XLwW2 | sh -s
   ```
 
 The install script will install dependencies, download the UniFi controller software, make some adjustments, and start the UniFi controller.
 
-The git.io link above should point to `https://raw.githubusercontent.com/unofficial-unifi/unifi-pfsense/master/install-unifi/install-unifi.sh`
+The bit.ly link above should point to `https://raw.githubusercontent.com/kvanee/unifi-opnsense/master/install-unifi/install-unifi.sh`
 
 
 Starting and Stopping
